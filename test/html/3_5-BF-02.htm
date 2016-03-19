@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML-Print 1.0//EN"
+      "http://www.w3.org/MarkUp/DTD/xhtml-print10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>3_5-BF-02</title>
+</head>
+<body>
+<div class="TestPurpose">
+24:  A conforming printer <em title="MUST NOT in RFC 2119 context"
+class="RFC2119">MUST NOT</em> treat [an] attribute [marked as <em>may</em>]
+as an error[: xml:lang ]</div> 
+<div class="AssertionsTested">Tests for assertions 24</div>
+
+<p>&lt;dl &gt;&nbsp; tag (block):  Below must be a list of three items with their definitions next to them but on the following line</p>
+<dl xml:lang="en"   >
+<dt xml:lang="en"   >&lt;dt &gt; tag (block): Item</dt><dd xml:lang="en"   >&lt; dd &gt; tag (block): definition of item</dd>
+<dt xml:lang="en"   >&lt;dt &gt; tag (block): Item</dt><dd xml:lang="en"   >&lt; dd &gt; tag (block): definition of item</dd>
+<dt xml:lang="en"   >&lt;dt &gt; tag (block): Item</dt><dd xml:lang="en"   >&lt; dd &gt; tag (block): definition of item</dd>
+</dl>
+
+<p>&lt;ul &gt;(block): Below must be a list of 5 words with bullets before each
+</p>
+<ul xml:lang="en"   >
+	<li xml:lang="en"   >&lt; li &gt; tag (block): This</li>
+	<li xml:lang="en"   >&lt; li &gt; tag (block): is</li>
+	<li xml:lang="en"   >&lt; li &gt; tag (block): an</li>
+	<li xml:lang="en"   >&lt; li &gt; tag (block): unordered</li>
+	<li xml:lang="en"   >&lt; li &gt; tag (block): list</li>
+</ul>
+
+
+<p>&lt;ol &gt; (block): Below must be a list of 5 words ordered by Arabic numerals</p>
+<ol xml:lang="en"  id="N" >
+	<li xml:lang="en"  id="O" >&lt; li &gt; tag (block): This</li>
+	<li xml:lang="en"  id="P" >&lt; li &gt; tag (block): is</li>
+	<li xml:lang="en"  id="Q" >&lt; li &gt; tag (block): an</li>
+	<li xml:lang="en"  id="R" >&lt; li &gt; tag (block): ordered</li>
+	<li xml:lang="en"  id="S" >&lt; li &gt; tag (block): list</li>
+</ol>
+
+</body>
+</html>

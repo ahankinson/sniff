@@ -1,0 +1,12 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN"><html><head><title></title><style type="text/css">body{color:red}</style></head><body><h1>FA<!-- ignore this line -->IL</h1><p>
+
+This is a plain text file, not an HTML file.
+This text should be unstyled.
+
+This test has:
++----+ +----+ +----- +----- +---- +---.
+|    | |    | |      |      |     |    \
++----+ +----+ +----+ +----+ +---- |    |
+|      |    |      |      | |     |    |
+|      |    | |____| |____| |____ |____/
+========================================

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML-Print 1.0//EN"
+      "http://www.w3.org/MarkUp/DTD/xhtml-print10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>3_3-BF-02</title>
+</head>
+<body>
+<div class="TestPurpose">Supports Core Attribte set of Text Module
+elements, 25: conforming printer MUST NOT treat [an] attribute [marked as
+N/A] as an error: title </div>
+<div class="AssertionsTested">Tests for assertions 25, 26, 27</div>
+
+<p>
+&lt;abbr&gt; tag (inline, small-caps): <abbr class="Text" id="A" title="abbreviation">abbr </abbr> is an abbreviation
+</p> 
+
+<p>
+ &lt;acronym&gt; tag<acronym class="Text" id="B" title="HyperText Transfer Protocol"> (inline, 
+ small-caps): HTTP</acronym> is an acronym
+</p>
+<p>
+&lt;address&gt; tag (block, italic) :</p> <address title="ignored" class="Text" id="C"> address is rendered in italic as a block</address>
+
+<p>&lt;blockquote&gt; tag: </p>
+<blockquote title="ignored" class="Text" id="one"><p> This entire section must be indented  from the rest of the text in the file. This is some text to 
+fill up the space. This is some text to fill up the space.  It should still be indented no matter how
+many lines long it is. This is some more text.  This is some more text.  This is some more text.</p> </blockquote>
+
+<p>
+&lt;br&gt; tag: There must be a line break here --><br title="ignored" class="Text" id="D" /> this text must be on the next line
+</p>
+
+
+
+<p>
+&lt;cite&gt;tag (inline, italic): <cite title="ignored" class="Text" id="E"> This line must be rendered in italics or in a way that differentiates it from the rest of the text </cite>
+</p>
+
+
+
+<p>
+&lt;code&gt; tag (inline, monospace): <code title="ignored" class="Text" id="F"> this text must be monospace </code>
+</p>
+
+
+
+<p>
+&lt;dfn&gt; tag (inline, italic):
+The word <dfn title="ignored" class="Text" id="G"> Definition </dfn> must be rendered in italics or in a way that differentiates it from the rest of the text
+</p>
+
+<p>
+&lt;div&gt; tag (block):
+The following text must be rendered as a block (on a line by itself):</p><div title="ignored" class="Text" id="H">This 
+  line must be rendered as a block</div>
+
+<p>
+&lt;em&gt; tag (inline italic) <em title="ignored" class="Text" id="I"> This line must be rendered in italic or in a way that differentiates it from the rest of the text</em>
+</p>
+
+
+
+<p>&lt;h1&gt; tag (block): </p><h1 title="ignored" class="Text" id="J"> This line of text uses the h1 size of heading and must be the largest heading size</h1>
+<p>&lt;h2&gt; tag (block): </p><h2 title="ignored" class="Text" id="K"> This line of text uses the h2 size of heading and must be the same size or smaller than h1 </h2>
+<p>&lt;h3&gt; tag (block): </p><h3 title="ignored" class="Text" id="L">This line of text uses the h3 size of heading and must be the same size or smaller than h2 </h3>
+<p>&lt;h4&gt; tag (block): </p><h4 title="ignored" class="Text" id="M">This line of text uses the h4 size of heading and must be the same size or smaller than h3</h4>
+<p>&lt;h5&gt; tag (block): </p><h5 title="ignored" class="Text" id="N"> This line of text uses the h5 size of heading and must be the same size or smaller than h4 </h5>
+<p>&lt;h6&gt; tag (block): </p><h6 title="ignored" class="Text" id="O"> This line of text uses the h6 size of heading and must be the same size or smaller than h5 </h6>
+
+
+
+
+
+<p>
+&lt;kbd&gt; tag (inline, monospace):<kbd title="ignored" class="Text" id="P"> This line should be rendered in bold or a standard monospace font </kbd>
+</p>
+
+
+<p>&lt;p&gt; tag (block)</p>
+<p title="ignored" class="Text" id="Q">Paragraph one: This line must be separate from the one below it </p>
+<p title="ignored" class="Text" id="R"> Paragraph two: This line must be separate from the one above it </p>
+
+
+
+<p>&lt;pre&gt; tag (block, monospace, whitespace preserved)</p>
+<pre title="ignored" class="Text" id="S">	The second line must be indented 8 characters
+	        from the line above it and the third line must be indented
+	            four characters from the line above it          
+
+	 </pre> 
+
+<p>
+&lt;q&gt; tag (inline): <q title="ignored" class="Text" id="T"> This line must be surrounded by quotes</q> 
+</p>
+
+<p>
+&lt;samp&gt; tag inline, monospace): <samp title="ignored" class="Text" id="U">This line must be rendered in a standard monospace font</samp>
+</p>
+
+
+
+<p>
+&lt;span&gt; tag (inline): <span title="ignored" class="Text" id="V">This text must appear on the same line </span>
+</p>
+
+
+
+<p>
+&lt;strong&gt; tag (inline, bold): <strong title="ignored" class="Text" id="W">This line must be rendered in bold or in a way that differentiates it from the rest of the text</strong> 
+</p>
+
+
+<p>
+&lt;var&gt; tag (inline, italic): <var title="ignored" class="Text" id="X"> this text must be on the same line and italic</var>
+</p>
+
+
+</body>
+</html>

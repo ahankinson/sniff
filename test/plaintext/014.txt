@@ -1,0 +1,10 @@
+<?xml version="1.0"?><?xml-stylesheet href="014.css" type="text/css"?><p><!--
+
+  + - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+  |  IF YOU CAN READ THIS TEXT, THEN THIS TEST HAS PASSED  |
+  + - - - - - - - - - - - - - - - - - - - - - - - - - - - -+
+
+Unless this was pretty-printed into an XML tree, in which case this
+test has failed.
+
+If there is any text at the end of *this* line, ignore it. -->FAIL</p>
