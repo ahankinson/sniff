@@ -17,7 +17,7 @@ LEFT_PAREN = 40 if sysversion > 2 else "("
 RIGHT_PAREN = 41 if sysversion > 2 else ")"
 
 # The threshold for plaintext
-PLAINTEXT_THRESH = 10000
+PLAINTEXT_THRESH = 1
 
 
 class ContentTypeSniffer:
@@ -37,6 +37,7 @@ class ContentTypeSniffer:
         self.file_bytes = f.read()
         f.close()
 
+        self.total_bytes = len(self.file_bytes)
         self.byte_bins = None
         self.hypothesis_html = 0
         self.hypothesis_javascript = 0
@@ -45,6 +46,10 @@ class ContentTypeSniffer:
     def sniff(self):
         if self._check_is_binary():
             return "binary"
+
+        # Report that an empty file is a plain text file.
+        if self.total_bytes == 0:
+            return "Plain Text"
 
         self._preprocess_file()
         self._enumerate_byte_bins()
@@ -93,24 +98,27 @@ class ContentTypeSniffer:
         num_curly_paren = self.byte_bins[LEFT_CURLY] + self.byte_bins[RIGHT_CURLY] + \
                     self.byte_bins[LEFT_PAREN] + self.byte_bins[RIGHT_PAREN]
 
-        if num_angles >= num_curly_paren:
-            self.hypothesis_html += num_angles
+        percent_html = float(num_angles) / self.total_bytes
+        percent_js = float(num_curly_paren) / self.total_bytes
+
+        if percent_html >= percent_js:
+            self.hypothesis_html += percent_html
         else:
             # Increase the competing javascript hypothesis
-            self.hypothesis_javascript += num_curly_paren
+            self.hypothesis_javascript += percent_js
 
     def _second_pass(self):
         """
             Checks for the presence of highly likely byte sequences, like <!html or <!DOCTYPE
-             for HTML; 'function' or 'var' for JS.
+             for HTML; 'function' or 'var ' for JS.
         """
-        html_matches = re.findall(b'<!html|<!DOCTYPE', self.file_bytes)
+        html_matches = re.findall(b'<!html|<!DOCTYPE html', self.file_bytes, re.IGNORECASE)
         if html_matches:
-            self.hypothesis_html += len(html_matches)
+            self.hypothesis_html += 1
 
         js_matches = re.findall(b'var\s+|function', self.file_bytes)
         if js_matches:
-            self.hypothesis_javascript += len(js_matches)
+            self.hypothesis_javascript += 1
 
         # If the file contains neither the doctype nor a significant amount of var/function,
         # significantly increase the likelihood that it's a plain text file.
