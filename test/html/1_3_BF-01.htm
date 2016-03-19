@@ -7,10 +7,30 @@
 </head>
 <body>
 <div class="TestPurpose">The content of the script element MUST
- be treated as if its display property were set to the value "none" 
- and the content of the noscript 
+ be treated as if its display property were set to the value "none"
+ and the content of the noscript
 element printed</div>
+<p>This is a statement with var and function and some {} and also a few () to confuse the content sniffer.</p>
 <div class="AssertionsTested">Tests for assertions 1</div>
 <script  type="plain/text">The text must not be printed</script><noscript><p>This text must be printed</p></noscript>
+<p>
+    var __10_4_2_1_1_1 = "str";
+
+    ES5Harness.registerTest( {
+    id: "10.4.2-1-1",
+
+    path: "TestCases/chapter10/10.4/10.4.2/10.4.2-1-1.js",
+
+    description: "Indirect call to eval has context set to global context",
+
+    test: function testcase() {
+    var _eval = eval;
+    var __10_4_2_1_1_1 = "str1";
+    if(_eval("\'str\' === __10_4_2_1_1_1") === true &&  // indirect eval
+    eval("\'str1\' === __10_4_2_1_1_1") === true)   // direct eval
+    return true;
+    }
+    });
+</p>
 </body>
 </html>
