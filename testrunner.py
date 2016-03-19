@@ -4,7 +4,7 @@ from sniff import ContentTypeSniffer
 binary = ['.pyc', '.DS_Store']
 html = ['.html', '.htm']
 js = ['.js']
-text = ['.txt', '.py']
+text = ['.txt', '.py', '.mei']
 
 total_html = 0
 total_js = 0
@@ -62,7 +62,7 @@ if __name__ == "__main__":
                 print("^^^^^^^^^^^^^^ INCORRECT ^^^^^^^^^^^^^^^^^")
             print("----------------------------------------------------")
 
-    print("Correct Binary Identification: {0}/{1} = {2}%".format(correct_bin, total_bin, ((float(correct_bin)/total_bin) * 100)))
-    print("Correct HTML Identification: {0}/{1} = {2}%".format(correct_html, total_html, ((float(correct_html)/total_html) * 100)))
-    print("Correct JS Identification: {0}/{1} = {2}%".format(correct_js, total_js, ((float(correct_js)/total_js) * 100)))
-    print("Correct Text Identification: {0}/{1} = {2}%".format(correct_text, total_text, ((float(correct_text)/total_text) * 100)))
+    print("Correct Binary Identification: {0}/{1} = {2:.2f}%".format(correct_bin, total_bin, ((float(correct_bin)/total_bin) * 100)))
+    print("Correct HTML Identification: {0}/{1} = {2:.2f}%".format(correct_html, total_html, ((float(correct_html)/total_html) * 100)))
+    print("Correct JS Identification: {0}/{1} = {2:.2f}%".format(correct_js, total_js, ((float(correct_js)/total_js) * 100)))
+    print("Correct Text Identification: {0}/{1} = {2:.2f}%".format(correct_text, total_text, ((float(correct_text)/total_text) * 100)))
