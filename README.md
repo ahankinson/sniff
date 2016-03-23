@@ -80,3 +80,7 @@ file is binary. It will also fail to predict a plain text with a file that has a
 
 4. XML is treated as plain text for the purposes of this exercise. XML would throw off the first pass,
 but the second pass does not predict HTML since it does not contain the appropriate doctype declaration.
+
+## Limitations
+
+While Byte Frequency Analysis is an accepted form of file type identification, this particular implementation is tuned to the specific task of distinguishing JavaScript, HTML, and Plain Text, and is not useful for any other file types.
