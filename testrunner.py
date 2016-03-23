@@ -1,22 +1,23 @@
 import os
 from sniff import ContentTypeSniffer
 
+# Treat files with these extensions as one of four types:
 binary = ['.pyc', '.DS_Store']
 html = ['.html', '.htm']
 js = ['.js']
-text = ['.txt', '.py', '.mei']
-
-total_html = 0
-total_js = 0
-total_text = 0
-total_bin = 0
-
-correct_html = 0
-correct_js = 0
-correct_text = 0
-correct_bin = 0
+text = ['.txt', '.py', '.mei', '.xml']
 
 if __name__ == "__main__":
+    total_html = 0
+    total_js = 0
+    total_text = 0
+    total_bin = 0
+
+    correct_html = 0
+    correct_js = 0
+    correct_text = 0
+    correct_bin = 0
+
     for dir, subdirs, files in os.walk('test'):
         for f in files:
             fname, ext = os.path.splitext(f)
