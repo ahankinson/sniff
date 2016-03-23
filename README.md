@@ -60,7 +60,7 @@ The current version achieves the following results with the included test set.
     Correct Binary Identification: 2/2 = 100.00%
     Correct HTML Identification: 53/53 = 100.00%
     Correct JS Identification: 98/98 = 100.00%
-    Correct Text Identification: 15/25 = 60.00%
+    Correct Text Identification: 16/26 = 61.54%
 
 Included in the test set are a number of files that attempt to address some corner cases:
 
@@ -78,8 +78,7 @@ distinguishing features of all plain text files, it will default to this predict
 it will fail if the plain text file is encoded in UTF16 since it sees the BOM and assumes the
 file is binary. It will also fail to predict a plain text with a file that has a lot of HTML tags.
 
-4. XML is treated as plain text for the purposes of this exercise. XML would throw off the first pass,
-but the second pass does not predict HTML since it does not contain the appropriate doctype declaration.
+4. XML is treated as plain text for the purposes of this exercise. XML would throw off the first pass, but the second pass does not predict HTML since it does not contain the appropriate doctype declaration. The test set contains two types of XML, one encoding using MusicXML ('.xml') and three encoded using the Music Encoding Initiative (".mei")
 
 ## Limitations
 
