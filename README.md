@@ -30,7 +30,7 @@ A test script and test files are included in the download:
     $> python testrunner.py
 
 It will run the filetype sniffer over three test sets containing a number of HTML, JavaScript,
-and plaintext files, and produce an overall score for its predictions on these files.
+and plaintext files, and produce an overall score for its predictions on these files. The test set is drawn from a number of places, including test sets for HTML, JavaScript, and Plain Text encodings. Consult the README in each subforlder in test for the sources of each set of files.
 
 ## Design
 
