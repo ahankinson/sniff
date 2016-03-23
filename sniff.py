@@ -22,9 +22,9 @@ PLAINTEXT_THRESH = 1
 
 class ContentTypeSniffer:
     """
-        Based on a simplified Byte Frequency Analysis approach.
-        Namely, we expect that a JavaScript file will have more parentheses and curly brackets,
-        while an HTML file will have more angle brackets.
+        Based on a simplified Byte Frequency Analysis approach with additional document heuristics
+        for improved detection. Namely, we expect that a JavaScript file will have more parentheses and curly brackets,
+        while an HTML file will have more angle brackets and contain a doctype identification.
 
         The sniffing code doesn't actually look at the filename extension; That, of course,
         is probably something that should be factored in to a live sniffing system, but
